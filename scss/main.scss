@@ -1,5 +1,6 @@
 @import 'config';
 @import 'menu';
+@import 'mobile';
 
 *{ //asterisk references everything 
     box-sizing: border-box;
@@ -7,7 +8,7 @@
 
 
 body{
-    @include background();
+    @include background;
     background: $primary-color;
     color-scheme: $secondary-color, $primary-color;
     color: white;
@@ -30,8 +31,8 @@ h1, h2,h3 {
 
     &.sm-heading{
         margin-bottom: 2rem;
-        padding: 0.2rem 1rem;
-        background: rgba(lighten($primary-color, 2), 0.5);
+        padding: 0.05rem 0.1rem;
+        background: rgba(lighten($primary-color, 2), 0);
 
     }
 }
