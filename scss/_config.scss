@@ -31,7 +31,17 @@ $background-opacity: 0.9;
     }
 }
 
+//function, not mixin, to set text color
+@function setTextColor($color){
+    @if (lightness($color)>40){
+        @return #000;
+    }@else{
+        @return #fff;
+    }
+}
+
 //Media Query Mixins
+//Rules so depending on what size it's being displayed, portfolio changes
 @mixin mediaSm {
     @media screen and (max-width: 500px){
         @content;
